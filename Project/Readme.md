@@ -2,7 +2,7 @@
 ### between tracks to match the DutchFolkTunes dataset's format
 
 find private_melodylines -iname '*.mid*' -print0 | sort -zn | xargs -0 ls | while IFS= read -r line
-   do
-      ../Abcmidi-20191209/midi2abc "$line"
+do
+   ../Abcmidi-20191209/midi2abc "$line"
    echo
 done >private_abc/all.abc
